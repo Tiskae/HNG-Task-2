@@ -1,0 +1,386 @@
+/* -------------------------------- */
+/* Basic resets */
+/* ------------------------------- */
+body {
+    font-size: 62.5%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: orange;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+h3 {
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(70, 70, 70);
+    line-height: 1.2;
+}
+
+.btn {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 0;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.btn.btn--primary {
+    background-color: orange;
+    color: white;
+}
+
+.btn.btn--primary:hover {
+    background-color: transparent;
+    color: orange;
+    border-color: orange;
+}
+
+.btn.btn--light {
+    background-color: transparent;
+    color: black;
+    border-color: orange;
+    color: orange;
+}
+
+.btn.btn--light:hover {
+    background-color: orange;
+    color: white;
+    border-color: transparent;
+}
+
+section {
+    padding: 5rem 4rem;
+    border-top: 5px solid rgb(255, 210, 128);
+}
+
+@media only screen and (max-width: 30em) {
+    section {
+        padding: 3rem;
+    }
+}
+
+/* -------------------------------- */
+/* Header section */
+/* ------------------------------- */
+.section-header {
+    border-top: 10px solid rgb(255, 210, 128);
+    height: 35rem;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    padding: 3rem;
+    gap: 2.5rem;
+    padding-bottom: 5rem;
+    background-image: url("../hero-4.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.profile-img__box {
+    height: 15rem;
+    width: 15rem;
+    padding: 3px;
+    border: 3px solid orange;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 30em) {
+    .profile-img__box {
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
+.profile-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.info__name span {
+    color: grey;
+}
+
+.info__title {
+    color: grey;
+}
+
+.action__btns {
+    display: flex;
+    gap: 1rem;
+    justify-self: center;
+}
+
+.action__link {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 30em) {
+    .action__btns {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .action__link {
+        display: block;
+        width: 100%;
+        display: flex;
+        justify-items: stretch;
+    }
+
+    .action__link .btn {
+        width: 100%;
+    }
+}
+/* -------------------------------- */
+/* Personal statement */
+/* ------------------------------- */
+.personal-statement {
+    text-align: center;
+    background-color: #fdf7eb;
+    display: grid;
+    gap: 2rem;
+}
+
+/* -------------------------------- */
+/* Education */
+/* ------------------------------- */
+.education-section {
+    display: grid;
+    gap: 3rem;
+    text-align: center;
+}
+
+.education__block {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 3fr;
+    text-align: start;
+}
+
+@media only screen and (max-width: 40em) {
+    .education__block {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.education__details {
+    display: grid;
+    gap: 2rem;
+}
+
+.education__duration {
+    font-size: 1rem;
+}
+
+.education__heading,
+.education__title {
+    display: grid;
+    align-content: start;
+    gap: 0.5rem;
+}
+
+/* -------------------------------- */
+/* Experience section */
+/* ------------------------------- */
+.experience-section {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 3rem;
+    background-color: rgb(253, 247, 235);
+}
+
+.experience__block {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+    text-align: start;
+}
+
+@media only screen and (max-width: 40em) {
+    .experience__block {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.experience__tasks--list {
+    display: grid;
+    gap: 0.4rem;
+    list-style: none;
+}
+
+.experience__tasks--item {
+    position: relative;
+}
+
+.experience__tasks--item::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-0.7rem, -50%);
+    background-color: orange;
+    content: "";
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}
+
+.experience__details {
+    display: grid;
+    gap: 2rem;
+}
+
+.experience__duration {
+    color: grey;
+    font-size: 1rem;
+}
+
+.experience__heading,
+.experience__title,
+.experience__tasks {
+    display: grid;
+    gap: 0.5rem;
+    align-content: start;
+}
+
+/* -------------------------------- */
+/* Skills section */
+/* ------------------------------- */
+.skills {
+    display: grid;
+    text-align: center;
+    gap: 3rem;
+    justify-items: stretch;
+}
+
+.skills__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 16rem));
+    justify-content: center;
+    justify-items: center;
+    list-style: none;
+    gap: 1rem 5rem;
+    text-align: start;
+}
+
+@media only screen and (max-width: 30em) {
+    .skills__list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.skill__item {
+    position: relative;
+}
+
+.skill__item::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-0.7rem, -50%);
+    background-color: orange;
+    content: "";
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}
+
+/* -------------------------------- */
+/* Contact section */
+/* ------------------------------- */
+.contact-section {
+    display: grid;
+    background-color: rgb(253, 247, 235);
+    justify-items: center;
+    gap: 3rem;
+}
+
+.contact {
+    font-style: normal;
+}
+
+.contact__list {
+    list-style: none;
+    text-align: center;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.contact__link {
+    color: grey;
+    text-decoration: underline;
+    transition: all 0.2s;
+}
+
+@media only screen and (max-width: 30em) {
+    .contact__link {
+        font-size: 0.8rem;
+    }
+}
+
+.contact__link:hover {
+    text-decoration: none;
+}
+
+.attribution__logos {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.attribution__link {
+    transition: all 0.2s;
+}
+
+.attribution__link:hover {
+    opacity: 0.6;
+}
+
+.attribution__logo {
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
